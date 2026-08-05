@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VORTEX Protection — Your server, protected around the clock.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="brand">
+      <svg class="mark" viewBox="0 0 30 30" fill="none">
+        <circle cx="15" cy="15" r="13" fill="url(#g1)" opacity="0.14"/>
+        <path d="M15 15 m0,-10 a10,10 0 1,1 -7.07,17.07 a6.5,6.5 0 1,0 4.6,-11.1 a3.2,3.2 0 1,1 2.26,5.46" stroke="url(#g1)" stroke-width="2.1" stroke-linecap="round" fill="none"/>
+        <circle cx="15" cy="15" r="1.6" fill="url(#g1)"/>
+        <defs>
+          <linearGradient id="g1" x1="4" y1="2" x2="26" y2="28" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#34E4C4"/>
+            <stop offset="1" stop-color="#7D6BFF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      VORTEX Protection
+    </a>
+    <div class="navlinks">
+      <a href="#protection">Protection</a>
+      <a href="#moderation">Moderation</a>
+    </div>
+    <div class="navactions">
+      <a href="https://vortexprotection.com" class="btn btn-ghost btn-sm">Log in with Discord</a>
+      <a href="https://discord.com/oauth2/authorize?client_id=1531934293327220756&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn btn-primary btn-sm">Add to Discord</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <canvas id="vortex-canvas" width="960" height="960"></canvas>
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="eyebrow">Anti-nuke · Moderation · Tickets · Appeals</div>
+        <h1>Your server, protected<br>around the <span class="accent">clock.</span></h1>
+        <p class="lede">VORTEX Protection stops nukes before they finish, filters what your rules forbid, and hands your mod team clean tools with a full audit trail — all set up from a dashboard, no code required.</p>
+        <div class="hero-ctas">
+          <a href="https://discord.com/oauth2/authorize?client_id=1531934293327220756&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn btn-primary">Add to Discord</a>
+          <a href="https://vortexprotection.com" class="btn btn-ghost">Open dashboard</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><b data-stat="servers">0</b><span>Servers protected</span></div>
+          <div class="stat"><b data-stat="members">0</b><span>Members protected</span></div>
+          <div class="stat"><b data-stat="raidsStopped">0</b><span>Raids stopped</span></div>
+          <div class="stat"><b data-stat="commandsRun">0</b><span>Commands run</span></div>
+          <div class="stat"><b data-stat="threatsFlagged">0</b><span>Threats flagged</span></div>
+        </div>
+      </div>
+
+      <div class="console">
+        <div class="console-bar">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <div class="console-title"><span class="live-dot"></span>LIVE THREAT LOG</div>
+        </div>
+        <div class="console-body" id="log"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap divider-swirl reveal">
+    <svg width="200" height="24" viewBox="0 0 200 24" fill="none">
+      <path d="M0 12 H70" stroke="#F1F3F8" stroke-opacity="0.14"/>
+      <path d="M130 12 H200" stroke="#F1F3F8" stroke-opacity="0.14"/>
+      <path d="M85 12 a15,7 0 1,1 30,0 a10,5 0 1,1 -20,0 a5,3 0 1,1 10,0" stroke="#34E4C4" stroke-width="1.4" fill="none"/>
+    </svg>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Get started</div>
+        <h2>Protected in three steps.</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Add the bot</h3>
+          <p>Hit Add to Discord, pick your server, and grant the permissions it asks for so it can protect and moderate.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Log in here</h3>
+          <p>Sign in with Discord to see every server you manage. Nothing to create — no extra accounts or passwords.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Flip the switches</h3>
+          <p>Every feature is a toggle or a form on this site. Turn on what you want, set your log channel, and you're covered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="protection">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Protection & security</div>
+        <h2>Built to survive the worst day.</h2>
+        <p>The moment something looks like an attack, VORTEX Protection acts first and explains itself after.</p>
+      </div>
+      <div class="grid reveal">
+        <div class="card is-safe">
+          <div class="card-top"><div class="card-icon">⚡</div></div>
+          <h3>Anti-nuke</h3>
+          <p>Mass bans, kicks, channel or role deletions and webhook spam are caught in seconds — the attacker is stopped and their webhooks wiped automatically.</p>
+        </div>
+        <div class="card is-safe">
+          <div class="card-top"><div class="card-icon">🔒</div></div>
+          <h3>Lockdown mode</h3>
+          <p>When things escalate, the server locks itself down, holding messages and invites until a moderator confirms it's safe.</p>
+        </div>
+        <div class="card is-safe">
+          <div class="card-top"><div class="card-icon">↺</div></div>
+          <h3>Channel & role recovery</h3>
+          <p>Deleted channels and roles are snapshotted the moment they vanish. One command rebuilds them with permissions intact.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">🚩</div></div>
+          <h3>Threat registry</h3>
+          <p>A shared list of known bad actors. When someone flagged joins your server, your team is alerted instantly — and can auto-act.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">🧹</div></div>
+          <h3>Word & link filter</h3>
+          <p>Block banned words, invite links, scam domains and mass mentions on new messages and edits, with role exemptions for staff.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">📶</div></div>
+          <h3>Anti-spam</h3>
+          <p>Message flooding earns an automatic timeout, on thresholds you tune per server.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="moderation">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Moderation toolkit</div>
+        <h2>Everything your mods reach for.</h2>
+        <p>Fast commands, a full case history, and a place for members to appeal — so the team spends less time arguing about what happened.</p>
+      </div>
+      <div class="grid reveal">
+        <div class="card">
+          <div class="card-top"><div class="card-icon">🛠️</div></div>
+          <h3>Mod commands</h3>
+          <p>Timeout, kick, ban (even by ID), unban and purge — with preset reasons, DM notices to the member, and a full embed log of every action.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">⚠️</div><span class="premium-pill">PREMIUM</span></div>
+          <h3>Warnings</h3>
+          <p>Warn members and let repeat warnings escalate to a timeout, kick or ban on a ladder you define.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">📋</div></div>
+          <h3>Case history</h3>
+          <p>Every action becomes a numbered case. Pull a member's full history or look up any single case in one command.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">🎫</div></div>
+          <h3>Tickets</h3>
+          <p>A dropdown panel lets members open a private support channel by category. On premium your team can read and reply from this site too, and closed tickets keep a transcript.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">📝</div></div>
+          <h3>Ban appeals</h3>
+          <p>Banned members appeal on this site through a link made for your server. Finished appeals land in your appeal channel for the team to review.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">🧯</div><span class="premium-pill">PREMIUM</span></div>
+          <h3>Quarantine</h3>
+          <p>Strip a suspicious member's roles and lock them to one channel while you investigate — then restore every role in a click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="extras">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Community & extras</div>
+        <h2>Nice things, when you're ready.</h2>
+      </div>
+      <div class="grid reveal">
+        <div class="card">
+          <div class="card-top"><div class="card-icon">👋</div><span class="premium-pill">PREMIUM</span></div>
+          <h3>Welcome & goodbye</h3>
+          <p>Greet new members and wave off leavers with your own templated messages.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">🎉</div><span class="premium-pill">PREMIUM</span></div>
+          <h3>Giveaways</h3>
+          <p>Run timed giveaways with reaction entry, automatic winner picking and reroll.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">⏰</div><span class="premium-pill">PREMIUM</span></div>
+          <h3>Reminders</h3>
+          <p>Let members set personal reminders the bot delivers right when they're due.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon">🎙️</div><span class="premium-pill">PREMIUM</span></div>
+          <h3>Voice & staff logs</h3>
+          <p>Track voice join, leave and move, and keep private staff notes on members.</p>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top:32px;color:var(--ink-muted);font-size:14px;">Run everything from Discord — type <code class="inline">*help</code> or <code class="inline">/help</code> to see the full command list.</p>
+    </div>
+  </section>
+
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
